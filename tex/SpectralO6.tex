@@ -641,12 +641,12 @@ approaches $\dim W \cdot \dim \mathrm{Ad}(u)$.
     \begin{table}[ht]
       \centering
       \caption{BFS step profile for the Steinberg-matrix fingerprint on $X_{5,q}$.
-        $d_{\rm St} = (q+1)^2$ is the ambient dimension.
+        $d_{\mathrm St} = (q+1)^2$ is the ambient dimension.
         $|S^*|$ is the first $|S_n|$ at which $\rbmat_n = 0$.}
       \label{tab:saturation}
       \begin{tabular}{@{}rrrrrrr@{}}
         \toprule
-        $q$ & $|G|$ & $d_{\rm St}$ & $\rbmat$ at step 4 & Sat.\ step & $|S^*|$ &
+        $q$ & $|G|$ & $d_{\mathrm St}$ & $\rbmat$ at step 4 & Sat.\ step & $|S^*|$ &
         $|S^*|/|G|$ \\
         \midrule
         29 & 12180  & 900  & 0.876 & 6 & 9933  & 0.816 \\
@@ -665,7 +665,7 @@ approaches $\dim W \cdot \dim \mathrm{Ad}(u)$.
     are determined entirely by the quaternionic structure of the generating set
     $\Omega_5$, which is the same for all $q$.
 
-    Second, the Steinberg module is fully saturated (rank $= d_{\rm St}$) at step
+    Second, the Steinberg module is fully saturated (rank $= d_{\mathrm St}$) at step
     $n^* = 6$ for all tested values of $q$.
     The saturation threshold $|S^*|$ decreases \emph{as a fraction} of $|G|$ as
     $q$ grows: $|S^*|/|G|$ drops from 0.82 ($q=29$) to 0.52 ($q=41$) to 0.19
@@ -712,14 +712,14 @@ approaches $\dim W \cdot \dim \mathrm{Ad}(u)$.
 
     \begin{figure}[ht]
       \centering
-      \includegraphics[width=0.95\textwidth]{fig_O6_main.pdf}
+      \includegraphics[width=0.95\textwidth]{fig_O6_main}
       \caption{Steinberg-matrix fingerprint on $X_{5,q}$, $q \in \{29, 41, 61\}$.
       \textbf{Top left:} Frontier fraction $\rbmat_n$ vs.\ $|S_n|$ (linear scale).
       All curves show a rapid transition from $\rbmat_n = 1$ to $\rbmat_n = 0$ between
       steps 4 and 6, independent of $q$.
       \textbf{Top right:} Semi-log scale confirming the rapid descent.
-      \textbf{Bottom left:} Cumulative admissible front $p_n^{\rm eff}$ vs.\ $|S_n|$
-        (log-log), showing the saturation at $d_{\rm St} = (q+1)^2$.
+      \textbf{Bottom left:} Cumulative admissible front $p_n^{\mathrm eff}$ vs.\ $|S_n|$
+        (log-log), showing the saturation at $d_{\mathrm St} = (q+1)^2$.
         \textbf{Bottom right:} Parameter table.
         The decreasing ratio $|S^*|/|G|$ establishes $q$-structural saturation.}
       \label{fig:main}
@@ -1093,69 +1093,7 @@ def run_cascade(generators, steinberg_maps, max_steps=None):
   \clearpage
   \begin{thebibliography}{99}
 
-    \bibitem{Cosmochrony}
-    J.~Beau,
-    ``Cosmochrony: A Pre-Geometric Relational Framework for Emergent Physics,''
-    Zenodo (2025).
-    DOI: \href{https://doi.org/10.5281/zenodo.17957510}{10.5281/zenodo.17957510}.
-
-    \bibitem{Beau2026c}
-    J.~Beau,
-    ``Bounded Relational Dynamics and the Structural Necessity of Born--Infeld Geometry,''
-    Zenodo (2026).
-    DOI: \href{https://doi.org/10.5281/zenodo.18407505}{10.5281/zenodo.18407505}.
-
-    \bibitem{Beau2026a1}
-    J.~Beau,
-    ``Spectral Admissibility under Bounded Flux: Non-Abelian Mode Selection on
-    Cayley Graphs of SU(2) Subgroups,''
-    Zenodo (2026).
-    DOI: \href{https://doi.org/10.5281/zenodo.18944985}{10.5281/zenodo.18944985}.
-
-    \bibitem{Beau2026a2}
-    J.~Beau,
-    ``Spectral Capacity Functional and the Binary-Polyhedral Maximality Conjecture,''
-    Zenodo (2026).
-    DOI: \href{https://doi.org/10.5281/zenodo.18945273}{10.5281/zenodo.18945273}.
-
-    \bibitem{Beau2026a4}
-    J.~Beau,
-    ``Three Particle Generations and Mass Hierarchy from Spectral Stratigraphy,''
-    Zenodo (2026).
-    DOI: \href{https://doi.org/10.5281/zenodo.19040490}{10.5281/zenodo.19040490}.
-
-    \bibitem{Beau2026a5}
-    J.~Beau,
-    ``Asymptotic Saturation of Projective Resolution: Expander Relaxation Graphs,''
-    Zenodo (2026).
-    DOI: \href{https://doi.org/10.5281/zenodo.19056975}{10.5281/zenodo.19056975}.
-
-    \bibitem{Beau2026a6}
-    J.~Beau,
-    ``Projective Resolution Dynamics on Variable-Valence Relaxation Graphs,''
-    Zenodo (2026).
-    DOI: \href{https://doi.org/10.5281/zenodo.19076319}{10.5281/zenodo.19076319}.
-
-    \bibitem{Beau2026a7}
-    J.~Beau,
-    ``Projective Dynamics and Mass Hierarchy: Hierarchical Amplification via Growing
-    Relational Valence,''
-    Zenodo (2026).
-    DOI: \href{https://doi.org/10.5281/zenodo.19076244}{10.5281/zenodo.19076244}.
-
-    \bibitem{Beau2026a8}
-    J.~Beau,
-    ``Subdiffusive Valence Growth under Bounded Relational Flux: Structural Derivation
-    of the Cascade Exponent $\beta$,''
-    Zenodo (2026).
-    DOI: \href{https://doi.org/10.5281/zenodo.19101472}{10.5281/zenodo.19101472}.
-
-    \bibitem{Beau2026a9}
-    J.~Beau,
-    ``Admissible Frontier Saturation and the Cascade Exponent: A Representation-Theoretic
-    Obstruction and its Matrix-Level Refinement,''
-    Zenodo (2026).
-    DOI: \href{https://doi.org/10.5281/zenodo.19101472}{0.5281/zenodo.19101472}.
+    \input{bib-beau}
 
     \bibitem{LPS88}
     A.~Lubotzky, R.~Phillips, P.~Sarnak,
