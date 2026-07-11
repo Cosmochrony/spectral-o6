@@ -137,8 +137,8 @@ mass hierarchy and constrains $\beta^* \in (0.09, 0.13)$, leaving $\beta$ as a
 phenomenological input.
 
 \item[O4~\cite{Beau2026a8}] Shows that the bounded-flux constraint
-$|\partial_t \chi_v| \leq c_\chi$, inherited from Born--Infeld saturation~\cite{Beau2026c},
-forces $\Delta p(n) \lesssim c_\chi \sqrt{p(n)}$, which integrates to $p(n) \lesssim C n^2$.
+$|\partial_t \chi_v| \leq c_{\mathrm{BI}}$, inherited from Born--Infeld saturation~\cite{Beau2026c},
+forces $\Delta p(n) \lesssim c_{\mathrm{BI}} \sqrt{p(n)}$, which integrates to $p(n) \lesssim C n^2$.
 Under the convention that identifies the saturated case with $\beta = 1$, this gives the
 structural upper bound $\beta \leq 1$.
 The gap between this bound and $\beta^* \approx 0.1$ is a factor of $10$--$20$.
@@ -489,7 +489,7 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
     Recall from O4~\cite{Beau2026a8} that the raw growth equation is
     \begin{equation}
       \label{eq:raw-growth}
-      \frac{dp}{dn} \lesssim c_\chi \sqrt{p(n)}.
+      \frac{dp}{dn} \lesssim c_{\mathrm{BI}} \sqrt{p(n)}.
     \end{equation}
 
     \begin{remark}[Scope of Section~\ref{sec:suppression}]
@@ -509,7 +509,7 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
     Incorporating a hypothetical matrix-level redundancy into the growth equation gives:
     \begin{equation}
       \label{eq:eff-growth}
-      \frac{dp}{dn} \lesssim \Rn \cdot c_\chi \sqrt{p(n)},
+      \frac{dp}{dn} \lesssim \Rn \cdot c_{\mathrm{BI}} \sqrt{p(n)},
     \end{equation}
     since only the fraction $\Rn$ of boundary vertices contributes genuinely new relational
     degrees of freedom.
@@ -529,10 +529,10 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
     \begin{proof}
       Substituting $\Rn \sim p(n)^{-\alpha}$ into \eqref{eq:eff-growth}:
       \[
-        \frac{dp}{dn} \;\lesssim\; c_\chi \, p(n)^{1/2 - \alpha}.
+        \frac{dp}{dn} \;\lesssim\; c_{\mathrm{BI}} \, p(n)^{1/2 - \alpha}.
       \]
-      Separating variables: $p^{\alpha - 1/2} dp \lesssim c_\chi \, dn$, so
-      $p(n)^{\alpha + 1/2} \lesssim (\alpha + 1/2) c_\chi n + \text{const}$,
+      Separating variables: $p^{\alpha - 1/2} dp \lesssim c_{\mathrm{BI}} \, dn$, so
+      $p(n)^{\alpha + 1/2} \lesssim (\alpha + 1/2) c_{\mathrm{BI}} n + \text{const}$,
       giving $p(n) \sim n^{1/(\alpha + 1/2)}$.
       Identifying this with $n^\beta$ yields \eqref{eq:beta-eff-formula}.
     \end{proof}
@@ -1007,7 +1007,7 @@ requires identifying the correct group-theoretic embedding.
   We record the steps explicitly for reference.
   The modified growth equation is
   $dp/dn \leq C_0 \, p^{1/2 - \alpha}$,
-  where $C_0 = c_\chi \cdot A$ absorbs the $O(1)$ constants.
+  where $C_0 = c_{\mathrm{BI}} \cdot A$ absorbs the $O(1)$ constants.
   Separating variables: $p^{\alpha - 1/2} dp \leq C_0 \, dn$.
   Integrating from $p_0 = p(1)$:
   $p(n)^{\alpha + 1/2} \leq C_1 n + C_2$,
