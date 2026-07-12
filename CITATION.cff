@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you cite this work, please use the metadata from this file."
+title: "Matrix-Level Dynamic Redundancy and the Structural Confinement of the Cascade Exponent"
+type: software
+authors:
+  - family-names: "Beau"
+    given-names: "Jérôme"
+repository-code: "https://github.com/Cosmochrony/spectral-o6"
+url: "https://cosmochrony.org/science/spectral/program/o6/"
+version: "1.15.1"
+doi: "10.5281/zenodo.19140624"
+license: "CC-BY-4.0"
+preferred-citation:
+  type: article
+  title: "Matrix-Level Dynamic Redundancy and the Structural Confinement of the Cascade Exponent"
+  authors:
+    - family-names: "Beau"
+      given-names: "Jérôme"
+  year: 2026
+  doi: "10.5281/zenodo.19140624"
+  url: "https://doi.org/10.5281/zenodo.19140624"
