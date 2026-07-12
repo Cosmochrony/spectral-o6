@@ -9,6 +9,7 @@
 \usepackage{microtype}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{doi}
 
 \geometry{margin=1in}
 
@@ -1091,41 +1092,7 @@ def run_cascade(generators, steinberg_maps, max_steps=None):
   and figure generation) is provided as supplementary material.
 
   \clearpage
-  \begin{thebibliography}{99}
-
-    \input{cosmochrony-bibliography}
-
-    \bibitem{LPS88}
-    A.~Lubotzky, R.~Phillips, P.~Sarnak,
-    ``Ramanujan graphs,''
-    \textit{Combinatorica} \textbf{8} (1988), 261--277.
-
-    \bibitem{Hoory06}
-    S.~Hoory, N.~Linial, A.~Wigderson,
-    ``Expander graphs and their applications,''
-    \textit{Bull.\ Amer.\ Math.\ Soc.\ } \textbf{43}(4) (2006), 439--561.
-    DOI: \href{https://doi.org/10.1090/S0273-0979-06-01126-8}{10.1090/S0273-0979-06-01126-8}.
-
-    \bibitem{Kesten59}
-    H.~Kesten,
-    ``Symmetric random walks on groups,''
-    \textit{Trans.\ Amer.\ Math.\ Soc.\ } \textbf{92} (1959), 336--354.
-
-    \bibitem{McKay81}
-    B.~D.~McKay,
-    ``The expected eigenvalue distribution of a large regular graph,''
-    \textit{Linear Algebra Appl.\ } \textbf{40} (1981), 203--216.
-
-    \bibitem{Isaacs}
-    I.~M.~Isaacs,
-    \textit{Character Theory of Finite Groups},
-    Academic Press, 1976.
-
-    \bibitem{Cheeger}
-    J.~Cheeger,
-    ``A lower bound for the smallest eigenvalue of the Laplacian,''
-    in \textit{Problems in Analysis}, Princeton Univ.\ Press, 1970, 195--199.
-
-  \end{thebibliography}
+  \bibliographystyle{plain}
+      \bibliography{cosmochrony-bibliography}
 
 \end{document}
