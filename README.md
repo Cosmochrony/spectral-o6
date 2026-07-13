@@ -1,5 +1,5 @@
 This repository contains the source of the **O6** Cosmochrony paper  
-[*Matrix-Level Dynamic Redundancy and the Structural Confinement of the Cascade Exponent β*](out/SpectralO6.pdf).
+*Matrix-Level Dynamic Redundancy and the Structural Confinement of the Cascade Exponent β*.
 
 This work extends the **spectral relaxation programme** by investigating the
 next structural layer left open by O5: whether the small phenomenological value
