@@ -1,5 +1,8 @@
 \documentclass[11pt]{article}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{geometry}
 \usepackage{hyperref}
@@ -12,6 +15,9 @@
 \usepackage{doi}
 
 \geometry{margin=1in}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
@@ -49,7 +55,7 @@ of the Cascade Exponent $\beta$}
 \author{J\'{e}r\^{o}me Beau\\
 \small Independent Researcher; jerome.beau@cosmochrony.org}
 
-\date{March 2026}
+\date{March 2026\\Version 1.1.1}
 
 \begin{document}
 
@@ -61,10 +67,11 @@ of the Cascade Exponent $\beta$}
     valence.
     O3 established the phenomenological window $\beta^* \in (0.09, 0.13)$ from charged lepton
     masses.
-    O4 derived the structural upper bound $\beta \leq 1$ from bounded Born--Infeld flux.
+    O4 derived the upper bound $\beta \leq 1$ within its growing-degree LPS closure from
+    bounded Born--Infeld flux.
     O5 proved that this gap cannot be closed by any purely representation-theoretic or
     fixed-dimensional mechanism, and identified dynamic redundancy in a matrix-level transition
-    space of growing dimension $O(q^2)$ as the correct class of mechanisms.
+    space of growing dimension $O(q^2)$ as the next candidate class.
 
     The present paper constructs and tests the first $O(q^2)$-dimensional fingerprint in
     this programme: the \emph{Steinberg-matrix fingerprint}
@@ -137,7 +144,8 @@ of the Cascade Exponent $\beta$}
 mass hierarchy and constrains $\beta^* \in (0.09, 0.13)$, leaving $\beta$ as a
 phenomenological input.
 
-\item[O4~\cite{Beau2026a8}] Shows that the bounded-flux constraint
+\item[O4~\cite{Beau2026a8}] Shows, within the growing-degree LPS closure used there, that the
+bounded-flux constraint
 $|\partial_t \chi_v| \leq c_{\mathrm{BI}}$, the capacity axiom [A-cap] of~\cite{Beau2026c},
 forces $\Delta p(n) \lesssim c_{\mathrm{BI}} \sqrt{p(n)}$, which integrates to $p(n) \lesssim C n^2$.
 Under the convention that identifies the saturated case with $\beta = 1$, this gives the
@@ -152,11 +160,11 @@ proxies fail to produce a $q$-structural saturation.
 The Steinberg-based fingerprint achieves a first $q$-structural saturation
 ($|S^*| \sim q^{1.15}$, $|S^*|/|G| \to 0$), but the pre-saturation window is too
 short for reliable exponent extraction.
-Concludes that $\beta^*$ is a \emph{dynamical redundancy} phenomenon in a matrix-level
-transition space of growing dimension $O(q^2)$.
+      Proposes a \emph{dynamical redundancy} mechanism in a matrix-level transition space of
+      growing dimension $O(q^2)$ as the next candidate.
     \end{description}
 
-    O5 thus isolates the correct class of mechanisms and defers construction to the
+    O5 thus isolates a candidate class of mechanisms and defers construction to the
     present paper.
 
   \subsection{Main contributions of this paper}
@@ -441,13 +449,13 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
 
     \begin{remark}[Pre-saturation window length]
       \label{rem:window-length}
-      The pre-saturation window has length $|S^*| = O(q^2)$, compared to $O(q)$ for the
-      Steinberg fingerprint of O5.
-      On $X_{5,q}$, this corresponds to a window of size $\sim q^2$ against
-      $|G| = q(q^2-1)/2 \approx q^3/2$.
-      For $q = 29$, $|G| \approx 12180$ while $|S^*_{\mathrm{adj}}| \approx 29^2 \approx 841$,
-      giving a ratio of $\approx 7\%$---large enough that the effective exponent can be
-      extracted reliably from the log-log slope.
+      The dimension count gives only the upper bound $|S^*|=O(q^2)$, compared with an
+      $O(q)$ ambient bound for the Steinberg fingerprint of O5.
+      On $X_{5,q}$, this upper bound is $O(q^2)$ against
+      $|G|=q(q^2-1)/2\approx q^3/2$.
+      It does not imply that the BFS-depth pre-saturation window grows with $q$.
+      The measurements in Section~\ref{ssec:saturation} instead show saturation at depth~6
+      for every tested prime, which is too short for a stable log--log exponent extraction.
     \end{remark}
 
   \subsection{Overlap functional and projective compression}
@@ -498,22 +506,28 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
       The analysis of this section does \emph{not} apply to the Steinberg-matrix fingerprint
       constructed in Section~\ref{sec:matspace}, which exhibits bounded-depth saturation
       (Section~\ref{ssec:saturation}).
-      It instead provides a general structural consequence: if any fingerprint in dimension
-      $O(q^{2k})$ satisfies a power-law decay of its redundancy functional
+      It instead provides a conditional consequence for the LPS cascade: if a fingerprint in
+      dimension $O(q^{2k})$ satisfies a power-law decay of its redundancy functional
       (Hypothesis~\ref{hyp:power-law}), then the growth of $p(n)$ is sub-diffusively
-      suppressed and the cascade exponent $\beff$ falls within the phenomenological window.
+      suppressed according to the O4 growth equation.
+      The conclusion falls within the phenomenological window only when the fitted exponent
+      also lies in the interval stated in Proposition~\ref{prop:beta-eff}.
       Section~\ref{sec:suppression} thus establishes the \emph{target specification} for O7:
       the power-law decay is the precise condition that a multi-step path fingerprint must
       satisfy.
+      It does not transfer this equation to the fixed-degree Heisenberg Cayley cascade; that
+      cross-substrate step has no native growth carrier in the frozen corpus~\cite{Beau2026sgn}.
     \end{remark}
 
-    Incorporating a hypothetical matrix-level redundancy into the growth equation gives:
+    We model the productive LPS frontier by inserting a hypothetical matrix-level redundancy
+    multiplicatively into the O4 growth equation:
     \begin{equation}
       \label{eq:eff-growth}
       \frac{dp}{dn} \lesssim \Rn \cdot c_{\mathrm{BI}} \sqrt{p(n)},
     \end{equation}
-    since only the fraction $\Rn$ of boundary vertices contributes genuinely new relational
-    degrees of freedom.
+    where the insertion of $\Rn$ is a modelling assumption identifying it with the productive
+    fraction of the LPS
+    boundary, not a definition valid on an arbitrary substrate.
 
     \begin{proposition}[Sub-diffusive growth law under power-law redundancy decay]
       \label{prop:beta-eff}
@@ -544,8 +558,9 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
       which derived the same formula from a different (conjectural) decay Ansatz.
       The present paper provides the structural basis for the Ansatz:
       the redundancy functional $\Rn$ is well-defined and provably $q$-structural
-      (Proposition~\ref{prop:Rn-decay}), and the numerical measurements in
-      Section~\ref{sec:numerics} yield $\alpha \approx 7$--$11$ compatible with $\beta^*$.
+      (Proposition~\ref{prop:Rn-decay}).
+      The numerical measurements in Section~\ref{sec:numerics} do not yield a stable
+      power-law exponent: the bounded pre-saturation window prevents that extraction.
     \end{remark}
 
   \subsection{Structural argument for large $\alpha$}
@@ -579,9 +594,10 @@ $\Pi_{\mathrm{mat}}(S_n)$ becomes exponentially small as $\dim \Pi_{\mathrm{mat}
 approaches $\dim W \cdot \dim \mathrm{Ad}(u)$.
     \end{enumerate}
 
-    This geometric saturation-of-directions mechanism produces a much faster decay of
-    $\Rn$ than a random-matrix model would predict, and is consistent with the numerically
-    observed $\alpha \gg 1$.
+    This geometric saturation-of-directions mechanism motivates testing decay faster than a
+    random-matrix model would predict.
+    The present bounded-depth data do not define a stable $\alpha$ and therefore do not test the
+    required interval quantitatively.
 
   \subsection{Confinement of the exponent}
     \label{ssec:confinement}
@@ -596,8 +612,8 @@ approaches $\dim W \cdot \dim \mathrm{Ad}(u)$.
       $\beff \in [0.09, 0.13] = \beta^*$.
     \end{corollary}
 
-    This establishes a structural mechanism by which the phenomenological window $\beta^*$
-    can arise from first principles, \emph{provided} a fingerprint with a sufficiently long
+    This gives a conditional LPS-side mechanism by which the phenomenological window $\beta^*$
+    can arise, \emph{provided} a fingerprint with a sufficiently long
     pre-saturation regime satisfying Hypothesis~\ref{hyp:power-law} is constructed.
     The Steinberg-matrix fingerprint of the present paper does not satisfy this hypothesis
     (Section~\ref{ssec:saturation}).
@@ -867,7 +883,7 @@ set for all $q$ and $\dim V$ is fixed by $\rho$.
         \toprule
         Paper & Mechanism              & Ambient dim & Result                                  \\
         \midrule
-        O4    & Bounded flux + Cheeger & $O(1)$      & $\beta \leq 1$ (structural upper bound) \\
+        O4    & Bounded flux + Cheeger & $O(1)$      & $\beta \leq 1$ (LPS closure) \\
         O5 & Vertex admissible frontier & $O(q)$ & saturation at $O(q) \ll |G|$;
         algebraic \\
         O5    & Steinberg-vector fp.   & $O(q)$      & $|S^*| \sim q^{1.15}$; bounded depth    \\
@@ -880,7 +896,7 @@ set for all $q$ and $\dim V$ is fixed by $\rho$.
     Each paper in the O-series eliminates one class of mechanisms while identifying the
     next.
     O6 establishes the no-go theorem (Proposition~\ref{prop:bounded-depth}): no fixed
-    finite-dimensional representation can produce the required cascade scaling.
+    finite-dimensional representation can produce the required scaling on this LPS cascade.
     The construction of a fingerprint with a genuinely growing state space is thereby
     not merely a natural next step but a logical necessity.
 
@@ -901,9 +917,9 @@ the first 186 directions are always filled by depth~3.
 \item Identified the Hecke operator action as the structural mechanism behind
 bounded-depth saturation, explaining why the $O(q^2)$-dimensional Steinberg
 fingerprint cannot produce a growing pre-saturation window.
-\item Retained the scaling formula $\beff = 1/(1/2 + \alpha)$
-(Proposition~\ref{prop:beta-eff}), which is valid for any fingerprint
-satisfying Hypothesis~\ref{hyp:power-law} and will serve as the basis for
+\item Retained, for the LPS cascade and the multiplicative productive-frontier model, the scaling
+formula $\beff = 1/(1/2 + \alpha)$ (Proposition~\ref{prop:beta-eff}).
+It applies to fingerprints satisfying Hypothesis~\ref{hyp:power-law} and will serve as the basis for
 exponent extraction once a fingerprint with a growing pre-saturation window is
 constructed.
 \item Identified the multi-step path fingerprint of dimension $O(q^{2k})$ as
@@ -952,6 +968,9 @@ requires identifying the correct group-theoretic embedding.
     rather than exhibiting a power-law decay over a regime growing with $q$.
     The derivation of a genuine power-law regime therefore remains entirely open and
     constitutes the central task of O7.
+    Even if such a regime is constructed on the LPS family, applying its exponent equation to
+    a fixed-degree Heisenberg cascade would remain a separate cross-substrate hypothesis; O6
+    supplies no native Heisenberg growth carrier~\cite{Beau2026sgn}.
 
     This is a genuine negative result that precisely characterises the limitation of
     $O(q^2)$-dimensional Steinberg fingerprints, consistent with---and in hindsight
@@ -963,9 +982,9 @@ requires identifying the correct group-theoretic embedding.
     This intermediate step is documented honestly and in full, in line with the
     reviewer-proof rigour principle of the O-series.
 
-    More broadly, Proposition~\ref{prop:bounded-depth} implies that the cascade exponent
+    More broadly, Proposition~\ref{prop:bounded-depth} implies that the LPS-side cascade exponent
     $\beta$ cannot be generated within any fixed finite-dimensional representation framework,
-    regardless of the representation used.
+    regardless of the representation used within that construction.
     Its origin must therefore be sought in genuinely dynamical constructions involving an
     effectively growing state space.
     The spectral relaxation programme thereby identifies the structural reason why $\beta$

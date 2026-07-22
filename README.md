@@ -1,6 +1,11 @@
 This repository contains the source of the **O6** Cosmochrony paper  
 *Matrix-Level Dynamic Redundancy and the Structural Confinement of the Cascade Exponent β*.
 
+**Version 1.1.1.** The LPS results and fixed-representation obstruction are unchanged.
+This version scopes the exponent equation to the growing-degree LPS closure and its
+multiplicative productive-frontier model. It does not transfer that equation to the
+fixed-degree Heisenberg Cayley cascade.
+
 This work extends the **spectral relaxation programme** by investigating the
 next structural layer left open by O5: whether the small phenomenological value
 of the cascade exponent
@@ -11,7 +16,7 @@ can arise from a matrix-level admissible redundancy mechanism.
 
 While **O5** proves that vertex-based admissible frontiers and fixed-dimensional
 representation-theoretic mechanisms cannot explain the smallness of $\beta$,
-it identifies matrix-level dynamic redundancy as the correct class of candidate
+it identifies matrix-level dynamic redundancy as a class of candidate
 mechanisms. The present work performs the first explicit construction and test
 at this level.
 
@@ -49,7 +54,7 @@ and therefore too short to extract a stable effective exponent $\beta_{\mathrm{e
 
 # Structural Role of O6
 
-O6 does not yet derive the phenomenological value of $\beta$.
+O6 does not derive the phenomenological value of $\beta$.
 
 Instead, it proves that an entire class of candidate mechanisms is structurally
 insufficient:
@@ -57,10 +62,16 @@ insufficient:
 - **O3** identified the phenomenological window for $\beta$
 - **O5** showed that vertex-based and low-level representation-theoretic mechanisms fail
 - **O6** proves that **no fixed finite-dimensional representation** can produce the
-  required cascade scaling
+  required scaling on the LPS cascade studied here
 
 The cascade exponent is therefore no longer attributable to any static finite-dimensional
-encoding of admissible transitions.
+encoding of admissible transitions within the LPS cascade studied here.
+
+The conditional formula $\beta_{\mathrm{eff}}=1/(1/2+\alpha)$ belongs to that LPS model:
+the $1/2$ term comes from the expander-side growth equation, and the insertion of the
+redundancy functional as a multiplicative productive fraction is an explicit modelling
+assumption. O6 supplies no native Heisenberg growth carrier, so the formula cannot be
+transferred verbatim to the fixed-degree nilpotent cascade.
 
 # What O6 Adds
 
@@ -108,7 +119,7 @@ O6 preserves all previous structural results:
 
 It does not modify the mass formula itself.
 Instead, it proves that the remaining small parameter $\beta$ cannot be generated within
-any fixed finite-dimensional matrix framework.
+any fixed finite-dimensional matrix framework on the LPS construction considered here.
 
 # Conceptual Structure
 
@@ -134,7 +145,7 @@ O6 provides:
 - a universal bounded-depth saturation result for all fixed finite-dimensional
   representation-based fingerprints
 - a no-go theorem excluding fixed finite-dimensional mechanisms as explanations of
-  the observed cascade scaling
+  the proposed LPS cascade scaling
 - a precise structural localisation of the remaining open problem
 
 It shows that the hierarchy mechanism requires more than refined representation theory:
@@ -142,9 +153,9 @@ it requires a genuinely growing dynamical space of admissible directions.
 
 # Residual Open Problem
 
-What remains open is no longer whether $\beta$ can come from a fixed matrix-level
-encoding, but how a **growing** admissible state space produces the required
-power-law redundancy decay.
+Within the LPS construction, what remains open is how a **growing** admissible state
+space could produce the required power-law redundancy decay. A separate model would
+still be required to identify such an equation with growth on the Heisenberg substrate.
 
 O6 therefore isolates the next necessary construction:
 
@@ -185,7 +196,7 @@ This framework is now:
 
 - spectrally complete at the $O(q^2)$ matrix level
 - structurally constrained beyond vertex-based descriptions
-- free of finite-dimensional representation-theoretic explanations for $\beta$
+- free of fixed-dimensional representation-theoretic explanations for $\beta$ within the LPS model
 - sharply focused on genuinely dynamical redundancy mechanisms
 
 It does not assume:
