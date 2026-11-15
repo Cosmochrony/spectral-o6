@@ -3,10 +3,13 @@ This repository contains the source of the **O6** Cosmochrony paper
 
 **Version 1.2.** The LPS results and fixed-representation obstruction are unchanged.
 O4 is reported in its own terms: no bound on $\beta$ follows from the bounded-flux argument.
-The square-root growth inequality is stated as an explicit, unestablished hypothesis (G), and
-the exponent equation $\beta_{\mathrm{eff}}=1/(1/2+\alpha)$ is conditional on (G) and on the
-power-law redundancy Ansatz. The equation is scoped to the growing-degree LPS closure and is not
-transferred to the fixed-degree Heisenberg Cayley cascade.
+The square-root growth inequality is stated as an explicit, unestablished hypothesis (G); the
+effective hypothesis (G$_R$), with the redundancy functional inserted multiplicatively, is a
+separate premise that does not follow from (G). Under (G$_R$) and the power-law redundancy
+Ansatz, O6 proves only the upper bound $\beta_{\mathrm{eff}}\le 1/(1/2+\alpha)$, not an equality: the
+phenomenological window $\beta^*=(0.09,0.13)$ is then possible only if $\alpha<1/0.09-1/2\approx10.611$,
+and no lower bound on $\alpha$ follows. The bound is scoped to the growing-degree LPS closure and is
+not transferred to the fixed-degree Heisenberg Cayley cascade.
 
 This work extends the **spectral relaxation programme** by investigating the
 next structural layer left open by O5: whether the small phenomenological value
@@ -69,12 +72,13 @@ insufficient:
 The cascade exponent is therefore no longer attributable to any static finite-dimensional
 encoding of admissible transitions within the LPS cascade studied here.
 
-The conditional formula $\beta_{\mathrm{eff}}=1/(1/2+\alpha)$ belongs to that LPS model:
+The conditional bound $\beta_{\mathrm{eff}}\le 1/(1/2+\alpha)$ belongs to that LPS model:
 the $1/2$ term comes from the square-root growth inequality $dp/dn\lesssim c_{\mathrm{BI}}\sqrt{p(n)}$,
 which O6 states as an explicit, unestablished hypothesis (G): O4 examines the argument advanced
-for it and shows that it does not hold, without showing (G) false. The insertion of the
-redundancy functional as a multiplicative productive fraction is a second explicit modelling
-assumption. O6 supplies no native Heisenberg growth carrier, so the formula cannot be
+for it and shows that this argument does not hold, without showing (G) false. The insertion of the
+redundancy functional as a multiplicative productive fraction defines a second, separate premise
+(G$_R$). The premises give an upper bound only; an attained exponent would need an independently
+derived two-sided growth law. O6 supplies no native Heisenberg growth carrier, so the bound cannot be
 transferred verbatim to the fixed-degree nilpotent cascade.
 
 # What O6 Adds

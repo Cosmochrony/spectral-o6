@@ -156,20 +156,20 @@ In the raw exponent of O3, used throughout this paper, that candidate would read
 not $\beta \leq 1$; it is not established, and no structural upper bound on $\beta$ is available
 from this route.
 
-\item[O5~\cite{Beau2026a9}] Proves that the vertex-based admissible frontier saturates
-at scale $O(q) \ll |G| = O(q^3)$, a consequence of the representation theory of
-$G = \PSL(2, \F_q)$.
-Establishes that character-based transition fingerprints and fixed-dimensional matrix
-proxies fail to produce a $q$-structural saturation.
-The Steinberg-based fingerprint achieves a first $q$-structural saturation
-($|S^*| \sim q^{1.15}$, $|S^*|/|G| \to 0$), but the pre-saturation window is too
-short for reliable exponent extraction.
-      Proposes a \emph{dynamical redundancy} mechanism in a matrix-level transition space of
-      growing dimension $O(q^2)$ as the next candidate.
+\item[O5~\cite{Beau2026a9}] Proves that any class-function encoding of the vertex boundary spans
+a space of dimension at most $|\Cl(G)| = O(q) \ll |G| = O(q^3)$, a consequence of the
+representation theory of $G = \PSL(2, \F_q)$.
+Shows that character-trace transition fingerprints collapse to a fixed, low-dimensional span,
+that fixed-matrix proxies saturate their own ambient dimension within a handful of shells, and
+that a Steinberg-based fingerprint on $\mathbb{P}^1(\F_q)$ saturates its full ambient space within
+the first two to three shells for every tested $q$, leaving no pre-saturation window from which
+to extract an exponent.
+      Leaves open whether a \emph{dynamical redundancy} mechanism in a matrix-valued space of
+      growing dimension could succeed where these constructions do not.
     \end{description}
 
-    O5 thus isolates a candidate class of mechanisms and defers construction to the
-    present paper.
+    O5 thus leaves a candidate class of mechanisms open; the present paper constructs and tests
+    one member of it.
 
   \subsection{Main contributions of this paper}
     \label{ssec:contributions}
@@ -510,29 +510,29 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
     that the front-size argument advanced for it does not hold and that a repair needs structure not
     supplied by [A-cap] or by the LPS construction; O4 does not show that~(G) is false.
     In the raw exponent used here, (G) alone would give $p(n) \lesssim C n^2$, that is $\beta \leq 2$
-    (the case $\alpha = 0$ of~\eqref{eq:beta-eff-formula} below).
+    (the same separation of variables as in Proposition~\ref{prop:beta-eff} below, with $\Rn \equiv 1$).
 
     \begin{remark}[Scope of Section~\ref{sec:suppression}]
       \label{rem:section4-scope}
       The analysis of this section does \emph{not} apply to the Steinberg-matrix fingerprint
       constructed in Section~\ref{sec:matspace}, which exhibits bounded-depth saturation
       (Section~\ref{ssec:saturation}).
-      It instead provides a conditional consequence for the LPS cascade, under two premises:
-      if hypothesis~(G) holds and a fingerprint in
+      It instead provides a conditional upper bound for the LPS cascade, under two premises:
+      if the effective growth hypothesis~(G$_R$) of~\eqref{eq:eff-growth} holds and a fingerprint in
       dimension $O(q^{2k})$ satisfies a power-law decay of its redundancy functional
-      (Hypothesis~\ref{hyp:power-law}), then the growth of $p(n)$ is sub-diffusively
-      suppressed according to~\eqref{eq:eff-growth}.
-      The conclusion falls within the phenomenological window only when the fitted exponent
-      also lies in the interval stated in Proposition~\ref{prop:beta-eff}.
-      Section~\ref{sec:suppression} thus establishes the \emph{target specification} for O7:
-      the power-law decay is the precise condition that a multi-step path fingerprint must
-      satisfy, granted~(G).
+      (Hypothesis~\ref{hyp:power-law}), then the growth exponent of $p(n)$ is bounded above as stated
+      in Proposition~\ref{prop:beta-eff}.
+      The premises give no lower bound on that exponent, so they do not select the phenomenological
+      window; they only exclude redundancy exponents too large to be compatible with it.
+      Section~\ref{sec:suppression} thus establishes a \emph{necessary condition} for O7, not a
+      target specification.
       It does not transfer this equation to the fixed-degree Heisenberg Cayley cascade; that
       cross-substrate step has no native growth carrier in the frozen corpus~\cite{Beau2026sgn}.
     \end{remark}
 
     We model the productive LPS frontier by inserting a hypothetical matrix-level redundancy
-    multiplicatively into hypothesis~(G):
+    multiplicatively into the right-hand side of~(G), which defines the effective growth
+    hypothesis~(G$_R$):
     \begin{equation}
       \label{eq:eff-growth}
       \frac{dp}{dn} \lesssim \Rn \cdot c_{\mathrm{BI}} \sqrt{p(n)},
@@ -540,19 +540,22 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
     where the insertion of $\Rn$ is a modelling assumption identifying it with the productive
     fraction of the LPS
     boundary, not a definition valid on an arbitrary substrate.
+    Hypothesis~(G$_R$) is a separate premise: since $0 \leq \Rn \leq 1$ it implies~(G), but it does
+    not follow from~(G), which constrains the raw frontier only.
 
-    \begin{proposition}[Sub-diffusive growth law under power-law redundancy decay]
+    \begin{proposition}[Sub-diffusive growth bound under power-law redundancy decay]
       \label{prop:beta-eff}
-      Assume two premises: hypothesis~(G), with $\Rn$ inserted as in~\eqref{eq:eff-growth}, and
+      Assume two premises: the effective growth hypothesis~(G$_R$) of~\eqref{eq:eff-growth}, and
       Hypothesis~\ref{hyp:power-law}.
       Then,
-      with $p(n) \sim n^\beta$ as reference ansatz and $\Rn \sim p(n)^{-\alpha}$, one has
+      with $p(n) \sim n^\beta$ as reference ansatz and $\Rn \sim p(n)^{-\alpha}$, $\alpha > 0$, one has
       \begin{equation}
         \label{eq:beta-eff-formula}
-        \beff \;=\; \frac{1}{1/2 + \alpha}.
+        \beff \;\leq\; \frac{1}{1/2 + \alpha}.
       \end{equation}
-      In particular, for $\beff \in (0.09, 0.13)$ the required redundancy exponent satisfies
-      $\alpha \approx 7.4$--$10.6$.
+      In particular, $\beff$ can lie in the open window $\beta^* = (0.09, 0.13)$ only if
+      $\alpha < 1/0.09 - 1/2 \approx 10.611$.
+      No lower bound on $\beff$, and hence no lower bound on $\alpha$, follows from these premises.
     \end{proposition}
 
     \begin{proof}
@@ -562,15 +565,24 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
       \]
       Separating variables: $p^{\alpha - 1/2} dp \lesssim c_{\mathrm{BI}} \, dn$, so
       $p(n)^{\alpha + 1/2} \lesssim (\alpha + 1/2) c_{\mathrm{BI}} n + \text{const}$,
-      giving $p(n) \sim n^{1/(\alpha + 1/2)}$.
-      Identifying this with $n^\beta$ yields \eqref{eq:beta-eff-formula}.
+      giving $p(n) = O\bigl(n^{1/(\alpha + 1/2)}\bigr)$.
+      Comparing with $p(n) \sim n^\beta$ yields \eqref{eq:beta-eff-formula}.
+      For $\beff > 0.09$ this requires $1/(1/2+\alpha) > 0.09$, that is $\alpha < 1/0.09 - 1/2$.
+      The inequality cannot be improved to an equality from these premises: for $\alpha = 8$,
+      $c_{\mathrm{BI}} = 1$, $p(n) = n^{1/17}$ and $\Rn = p(n)^{-8}$, one has
+      $p'(n) = n^{-16/17}/17 \leq n^{-15/34} = \Rn \sqrt{p(n)}$ for all $n \geq 1$, so both premises
+      hold with exact power laws, while $\beta = 1/17 < 1/(1/2+\alpha) = 2/17$ and $\beta \notin \beta^*$.
+      An attained exponent would require an independently derived two-sided (saturation) law, which
+      is not supplied here.
     \end{proof}
 
     \begin{remark}[Comparison with O5's formula]
       \label{rem:O5-compare}
-      Equation~\eqref{eq:beta-eff-formula} is identical to Remark~2.15 of O5~\cite{Beau2026a9},
-      which derived the same formula from a different (conjectural) decay Ansatz.
-      The present paper provides the structural basis for the Ansatz:
+      O5~\cite{Beau2026a9} (Remark~2.16) examines a candidate redundancy law of the same functional
+      form and finds it not supported by the constructions it tests: none supplies a pre-saturation
+      regime in which $\alpha$ could be measured.
+      Proposition~\ref{prop:beta-eff} gives only an upper bound of that form, under~(G$_R$).
+      The present paper provides a structural basis for the Ansatz:
       the redundancy functional $\Rn$ is well-defined and provably $q$-structural
       (Proposition~\ref{prop:Rn-decay}).
       The numerical measurements in Section~\ref{sec:numerics} do not yield a stable
@@ -580,8 +592,12 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
   \subsection{Structural argument for large $\alpha$}
     \label{ssec:large-alpha}
 
-    The required value $\alpha \approx 7.4$--$10.6$ is much larger than the soft
-    polynomial decay ($\alpha \approx 0.5$) characteristic of random-matrix heuristics.
+    Proposition~\ref{prop:beta-eff} requires no particular lower value of $\alpha$: a small exponent
+    is compatible with its bound for every $\alpha < 10.611$.
+    A large $\alpha$ would instead make the bound itself small: the bound $1/(1/2+\alpha)$ lies in
+    $\beta^*$ exactly when $1/0.13 - 1/2 < \alpha < 1/0.09 - 1/2$, approximately $7.19 < \alpha < 10.61$,
+    far above the soft polynomial decay ($\alpha \approx 0.5$) characteristic of random-matrix
+    heuristics.
     We give a structural argument for why $\alpha \gg 1$ is natural in the present context.
 
     The adjoint-product fingerprint $\pi_{\mathrm{mat}}(u \to v) = \mathrm{Ad}(u) \otimes \mathrm{Ad}(s)$
@@ -610,31 +626,34 @@ approaches $\dim W \cdot \dim \mathrm{Ad}(u)$.
 
     This geometric saturation-of-directions mechanism motivates testing decay faster than a
     random-matrix model would predict.
-    The present bounded-depth data do not define a stable $\alpha$ and therefore do not test the
-    required interval quantitatively.
+    The present bounded-depth data do not define a stable $\alpha$ and therefore do not test any
+    interval of $\alpha$ quantitatively.
 
-  \subsection{Confinement of the exponent}
+  \subsection{Upper confinement of the exponent}
     \label{ssec:confinement}
 
     Combining the structural argument of Section~\ref{ssec:large-alpha} with
     Proposition~\ref{prop:beta-eff}:
 
-    \begin{corollary}[Structural confinement of $\beta$]
+    \begin{corollary}[Upper confinement of $\beta$]
       \label{cor:confinement}
-      If hypothesis~(G) holds, with $\Rn$ inserted as in~\eqref{eq:eff-growth}, and the adjoint-product
-      fingerprint satisfies the power-law decay Ansatz
-      (Hypothesis~\ref{hyp:power-law}) with $\alpha \in [7.4, 10.6]$, then
-      $\beff \in [0.09, 0.13] = \beta^*$.
+      Assume the effective growth hypothesis~(G$_R$) and that the adjoint-product fingerprint
+      satisfies the power-law decay Ansatz (Hypothesis~\ref{hyp:power-law}) with exponent $\alpha$.
+      Then $\beff \leq 1/(1/2+\alpha)$; consequently $\beff \in \beta^* = (0.09, 0.13)$ is possible only
+      if $\alpha < 1/0.09 - 1/2 \approx 10.611$.
+      For $\alpha \geq 7.4$ the bound gives $\beff \leq 1/7.9 < 0.127$; it does not give $\beff > 0.09$.
     \end{corollary}
 
-    This gives a conditional LPS-side mechanism by which the phenomenological window $\beta^*$
-    can arise, \emph{provided} hypothesis~(G) holds and a fingerprint with a sufficiently long
-    pre-saturation regime satisfying Hypothesis~\ref{hyp:power-law} is constructed.
-    The Steinberg-matrix fingerprint of the present paper does not satisfy this hypothesis
+    This gives a conditional LPS-side upper bound compatible with the phenomenological window
+    $\beta^*$, not a mechanism selecting it, \emph{provided} hypothesis~(G$_R$) holds and a fingerprint
+    with a sufficiently long pre-saturation regime satisfying Hypothesis~\ref{hyp:power-law} is
+    constructed.
+    Selecting $\beta^*$ would require an independently derived two-sided growth law, not supplied here.
+    The Steinberg-matrix fingerprint of the present paper does not satisfy Hypothesis~\ref{hyp:power-law}
     (Section~\ref{ssec:saturation}).
-    The corollary therefore specifies the \emph{target for O7}: construct a fingerprint
+    The corollary therefore specifies only a \emph{necessary condition} for O7: a fingerprint
     in dimension $O(q^{2k})$ for $k \geq 2$ whose redundancy functional decays as
-    $\Rn \sim p(n)^{-\alpha}$ with $\alpha \in [7.4, 10.6]$.
+    $\Rn \sim p(n)^{-\alpha}$ is compatible with $\beta^*$ under~(G$_R$) only if $\alpha < 10.611$.
 
   \section{Numerical Evidence on LPS Graphs}
   \label{sec:numerics}
@@ -901,7 +920,7 @@ set for all $q$ and $\dim V$ is fixed by $\rho$.
         O4    & Bounded flux + Cheeger & $O(1)$      & no bound follows; candidate $\beta \leq 2$ (raw) open \\
         O5 & Vertex admissible frontier & $O(q)$ & saturation at $O(q) \ll |G|$;
         algebraic \\
-        O5    & Steinberg-vector fp.   & $O(q)$      & $|S^*| \sim q^{1.15}$; bounded depth    \\
+        O5    & Steinberg-vector fp.   & $O(q)$      & full saturation within 2--3 shells; no window \\
         O6 & Steinberg-matrix fp. & $O(q^2)$ & $|S^*|/|G| \to 0$; depth~6 independent
         of $q$; no-go theorem (Prop.~\ref{prop:bounded-depth}); $O(q^{2k})$ required \\
         \bottomrule
@@ -933,10 +952,11 @@ the first 186 directions are always filled by depth~3.
 bounded-depth saturation, explaining why the $O(q^2)$-dimensional Steinberg
 fingerprint cannot produce a growing pre-saturation window.
 \item Retained, for the LPS cascade and the multiplicative productive-frontier model, the scaling
-formula $\beff = 1/(1/2 + \alpha)$ (Proposition~\ref{prop:beta-eff}), conditional on hypothesis~(G).
-It applies to fingerprints satisfying Hypothesis~\ref{hyp:power-law} and will serve as the basis for
-exponent extraction once a fingerprint with a growing pre-saturation window is
-constructed.
+bound $\beff \leq 1/(1/2 + \alpha)$ (Proposition~\ref{prop:beta-eff}), conditional on the effective
+growth hypothesis~(G$_R$).
+It applies to fingerprints satisfying Hypothesis~\ref{hyp:power-law} and will bound the exponent from
+above once a fingerprint with a growing pre-saturation window is constructed; it does not determine
+the exponent.
 \item Identified the multi-step path fingerprint of dimension $O(q^{2k})$ as
 the minimal construction for a fingerprint with a growing pre-saturation window
 (open direction O6-O1).
@@ -1035,20 +1055,22 @@ requires identifying the correct group-theoretic embedding.
   has ambient dimension $(q+1)^2 \sim q^2$ and breaks the character-level
   degeneracy (distinct LPS generators have distinct $\tilde\sigma$ images).
 
-  \section{Proof of the Scaling Implication $\beff = 1/(1/2 + \alpha)$}
+  \section{Proof of the Scaling Bound \texorpdfstring{$\beff \leq 1/(1/2 + \alpha)$}{beta\_eff <= 1/(1/2 + alpha)}}
   \label{app:proof}
 
   This is a direct computation already given in the proof of Proposition~\ref{prop:beta-eff}.
   We record the steps explicitly for reference.
-  Under the two premises of Proposition~\ref{prop:beta-eff} (hypothesis~(G) with the insertion
-  of $\Rn$, and Hypothesis~\ref{hyp:power-law}), the modified growth equation is
+  Under the two premises of Proposition~\ref{prop:beta-eff} (the effective growth
+  hypothesis~(G$_R$) and Hypothesis~\ref{hyp:power-law}), the modified growth inequality is
   $dp/dn \leq C_0 \, p^{1/2 - \alpha}$,
   where $C_0 = c_{\mathrm{BI}} \cdot A$ absorbs the $O(1)$ constants.
   Separating variables: $p^{\alpha - 1/2} dp \leq C_0 \, dn$.
   Integrating from $p_0 = p(1)$:
   $p(n)^{\alpha + 1/2} \leq C_1 n + C_2$,
   so $p(n) \leq (C_1 n + C_2)^{1/(\alpha + 1/2)}$.
-  For large $n$, $p(n) \sim n^{1/(\alpha+1/2)}$, giving $\beta = 1/(1/2 + \alpha)$.
+  For large $n$, $p(n) = O(n^{1/(\alpha+1/2)})$, giving $\beta \leq 1/(1/2 + \alpha)$ under the reference
+  ansatz $p(n) \sim n^\beta$; the countermodel in the proof of Proposition~\ref{prop:beta-eff} shows
+  that equality does not follow.
 
   \section{Python Implementation}
   \label{app:python}
