@@ -55,7 +55,7 @@ of the Cascade Exponent $\beta$}
 \author{J\'{e}r\^{o}me Beau\\
 \small Independent Researcher; jerome.beau@cosmochrony.org}
 
-\date{March 2026\\Version 1.1.1}
+\date{March 2026\\Version 1.2}
 
 \begin{document}
 
@@ -67,11 +67,12 @@ of the Cascade Exponent $\beta$}
     valence.
     O3 established the phenomenological window $\beta^* \in (0.09, 0.13)$ from charged lepton
     masses.
-    O4 derived the upper bound $\beta \leq 1$ within its growing-degree LPS closure from
-    bounded Born--Infeld flux.
-    O5 proved that this gap cannot be closed by any purely representation-theoretic or
-    fixed-dimensional mechanism, and identified dynamic redundancy in a matrix-level transition
-    space of growing dimension $O(q^2)$ as the next candidate class.
+    O4 examined whether bounded Born--Infeld flux and the Cheeger inequality of LPS graphs bound
+    $\beta$, and found that no bound follows from that argument: the candidate square-root growth
+    inequality it examines is not established.
+    O5 proved that purely representation-theoretic, fixed-dimensional character-trace encodings
+    cannot supply the required novelty, and left open whether dynamic redundancy in a matrix-level
+    transition space of growing dimension could do so.
 
     The present paper constructs and tests the first $O(q^2)$-dimensional fingerprint in
     this programme: the \emph{Steinberg-matrix fingerprint}
@@ -144,13 +145,16 @@ of the Cascade Exponent $\beta$}
 mass hierarchy and constrains $\beta^* \in (0.09, 0.13)$, leaving $\beta$ as a
 phenomenological input.
 
-\item[O4~\cite{Beau2026a8}] Shows, within the growing-degree LPS closure used there, that the
-bounded-flux constraint
+\item[O4~\cite{Beau2026a8}] Examines whether the bounded-flux constraint
 $|\partial_t \chi_v| \leq c_{\mathrm{BI}}$, the capacity axiom [A-cap] of~\cite{Beau2026c},
-forces $\Delta p(n) \lesssim c_{\mathrm{BI}} \sqrt{p(n)}$, which integrates to $p(n) \lesssim C n^2$.
-Under the convention that identifies the saturated case with $\beta = 1$, this gives the
-structural upper bound $\beta \leq 1$.
-The gap between this bound and $\beta^* \approx 0.1$ is a factor of $10$--$20$.
+combined with the Cheeger inequality of Ramanujan--LPS graphs, bounds $\beta$.
+It shows that no bound follows from the stated argument: the front-size estimate
+$\Delta p(n) \lesssim c_{\mathrm{BI}} \sqrt{p(n)}$, which would integrate to $p(n) \lesssim C n^2$,
+rests on three independent defects, and its repair requires structure that neither [A-cap] nor
+the LPS construction supplies.
+In the raw exponent of O3, used throughout this paper, that candidate would read $\beta \leq 2$,
+not $\beta \leq 1$; it is not established, and no structural upper bound on $\beta$ is available
+from this route.
 
 \item[O5~\cite{Beau2026a9}] Proves that the vertex-based admissible frontier saturates
 at scale $O(q) \ll |G| = O(q^3)$, a consequence of the representation theory of
@@ -495,32 +499,40 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
   \subsection{Effective frontier size and the modified growth equation}
     \label{ssec:effective-frontier}
 
-    Recall from O4~\cite{Beau2026a8} that the raw growth equation is
+    This section works under the following growth hypothesis on the LPS cascade, referred to as
+    hypothesis~(G):
     \begin{equation}
       \label{eq:raw-growth}
       \frac{dp}{dn} \lesssim c_{\mathrm{BI}} \sqrt{p(n)}.
     \end{equation}
+    Hypothesis~(G) is not established.
+    It is the candidate square-root growth inequality examined in O4~\cite{Beau2026a8}, which shows
+    that the front-size argument advanced for it does not hold and that a repair needs structure not
+    supplied by [A-cap] or by the LPS construction; O4 does not show that~(G) is false.
+    In the raw exponent used here, (G) alone would give $p(n) \lesssim C n^2$, that is $\beta \leq 2$
+    (the case $\alpha = 0$ of~\eqref{eq:beta-eff-formula} below).
 
     \begin{remark}[Scope of Section~\ref{sec:suppression}]
       \label{rem:section4-scope}
       The analysis of this section does \emph{not} apply to the Steinberg-matrix fingerprint
       constructed in Section~\ref{sec:matspace}, which exhibits bounded-depth saturation
       (Section~\ref{ssec:saturation}).
-      It instead provides a conditional consequence for the LPS cascade: if a fingerprint in
+      It instead provides a conditional consequence for the LPS cascade, under two premises:
+      if hypothesis~(G) holds and a fingerprint in
       dimension $O(q^{2k})$ satisfies a power-law decay of its redundancy functional
       (Hypothesis~\ref{hyp:power-law}), then the growth of $p(n)$ is sub-diffusively
-      suppressed according to the O4 growth equation.
+      suppressed according to~\eqref{eq:eff-growth}.
       The conclusion falls within the phenomenological window only when the fitted exponent
       also lies in the interval stated in Proposition~\ref{prop:beta-eff}.
       Section~\ref{sec:suppression} thus establishes the \emph{target specification} for O7:
       the power-law decay is the precise condition that a multi-step path fingerprint must
-      satisfy.
+      satisfy, granted~(G).
       It does not transfer this equation to the fixed-degree Heisenberg Cayley cascade; that
       cross-substrate step has no native growth carrier in the frozen corpus~\cite{Beau2026sgn}.
     \end{remark}
 
     We model the productive LPS frontier by inserting a hypothetical matrix-level redundancy
-    multiplicatively into the O4 growth equation:
+    multiplicatively into hypothesis~(G):
     \begin{equation}
       \label{eq:eff-growth}
       \frac{dp}{dn} \lesssim \Rn \cdot c_{\mathrm{BI}} \sqrt{p(n)},
@@ -531,7 +543,9 @@ $|S^*|/|G| = O(q^2/q^3) = O(1/q) \to 0$ as $q \to \infty$.
 
     \begin{proposition}[Sub-diffusive growth law under power-law redundancy decay]
       \label{prop:beta-eff}
-      Under Hypothesis~\ref{hyp:power-law} and the growth equation~\eqref{eq:eff-growth},
+      Assume two premises: hypothesis~(G), with $\Rn$ inserted as in~\eqref{eq:eff-growth}, and
+      Hypothesis~\ref{hyp:power-law}.
+      Then,
       with $p(n) \sim n^\beta$ as reference ansatz and $\Rn \sim p(n)^{-\alpha}$, one has
       \begin{equation}
         \label{eq:beta-eff-formula}
@@ -883,7 +897,7 @@ set for all $q$ and $\dim V$ is fixed by $\rho$.
         \toprule
         Paper & Mechanism              & Ambient dim & Result                                  \\
         \midrule
-        O4    & Bounded flux + Cheeger & $O(1)$      & $\beta \leq 1$ (LPS closure) \\
+        O4    & Bounded flux + Cheeger & $O(1)$      & no bound follows; candidate $\beta \leq 2$ (raw) not established \\
         O5 & Vertex admissible frontier & $O(q)$ & saturation at $O(q) \ll |G|$;
         algebraic \\
         O5    & Steinberg-vector fp.   & $O(q)$      & $|S^*| \sim q^{1.15}$; bounded depth    \\
@@ -1025,7 +1039,8 @@ requires identifying the correct group-theoretic embedding.
 
   This is a direct computation already given in the proof of Proposition~\ref{prop:beta-eff}.
   We record the steps explicitly for reference.
-  The modified growth equation is
+  Under the two premises of Proposition~\ref{prop:beta-eff} (hypothesis~(G) with the insertion
+  of $\Rn$, and Hypothesis~\ref{hyp:power-law}), the modified growth equation is
   $dp/dn \leq C_0 \, p^{1/2 - \alpha}$,
   where $C_0 = c_{\mathrm{BI}} \cdot A$ absorbs the $O(1)$ constants.
   Separating variables: $p^{\alpha - 1/2} dp \leq C_0 \, dn$.

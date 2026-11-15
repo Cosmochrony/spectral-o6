@@ -1,10 +1,12 @@
 This repository contains the source of the **O6** Cosmochrony paper  
 *Matrix-Level Dynamic Redundancy and the Structural Confinement of the Cascade Exponent β*.
 
-**Version 1.1.1.** The LPS results and fixed-representation obstruction are unchanged.
-This version scopes the exponent equation to the growing-degree LPS closure and its
-multiplicative productive-frontier model. It does not transfer that equation to the
-fixed-degree Heisenberg Cayley cascade.
+**Version 1.2.** The LPS results and fixed-representation obstruction are unchanged.
+O4 is reported in its own terms: no bound on $\beta$ follows from the bounded-flux argument.
+The square-root growth inequality is stated as an explicit, unestablished hypothesis (G), and
+the exponent equation $\beta_{\mathrm{eff}}=1/(1/2+\alpha)$ is conditional on (G) and on the
+power-law redundancy Ansatz. The equation is scoped to the growing-degree LPS closure and is not
+transferred to the fixed-degree Heisenberg Cayley cascade.
 
 This work extends the **spectral relaxation programme** by investigating the
 next structural layer left open by O5: whether the small phenomenological value
@@ -68,8 +70,10 @@ The cascade exponent is therefore no longer attributable to any static finite-di
 encoding of admissible transitions within the LPS cascade studied here.
 
 The conditional formula $\beta_{\mathrm{eff}}=1/(1/2+\alpha)$ belongs to that LPS model:
-the $1/2$ term comes from the expander-side growth equation, and the insertion of the
-redundancy functional as a multiplicative productive fraction is an explicit modelling
+the $1/2$ term comes from the square-root growth inequality $dp/dn\lesssim c_{\mathrm{BI}}\sqrt{p(n)}$,
+which O6 states as an explicit, unestablished hypothesis (G): O4 examines the argument advanced
+for it and shows that it does not hold, without showing (G) false. The insertion of the
+redundancy functional as a multiplicative productive fraction is a second explicit modelling
 assumption. O6 supplies no native Heisenberg growth carrier, so the formula cannot be
 transferred verbatim to the fixed-degree nilpotent cascade.
 
@@ -133,8 +137,10 @@ O6 completes the next stage of the structural chain:
 6. O5 → admissible frontier saturation and localisation of the problem
 7. O6 → no-go theorem for fixed finite-dimensional fingerprints
 
-The programme now excludes not only super-quadratic growth laws, but also the full class
-of finite-dimensional static encodings as possible origins of the small cascade exponent.
+Within the LPS cascade studied here, the programme now excludes the full class of
+finite-dimensional static encodings as possible origins of the small cascade exponent. No
+structural upper bound on the growth law is established: O4 shows that the bounded-flux
+argument for $p(n)\lesssim Cn^2$ (that is $\beta\le 2$ in the raw exponent) does not hold.
 
 # What O6 Resolves
 
