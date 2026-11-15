@@ -66,7 +66,7 @@ insufficient:
 
 - **O3** identified the phenomenological window for $\beta$
 - **O5** showed that vertex-based and low-level representation-theoretic mechanisms fail
-- **O6** proves that **no fixed finite-dimensional representation** can produce the
+- **O6** proves that **no fixed finite-dimensional representation** can produce a
   power-law redundancy scaling over a growing window on the LPS cascade studied here
 
 The cascade exponent is therefore no longer attributable to any static finite-dimensional
