@@ -67,7 +67,7 @@ insufficient:
 - **O3** identified the phenomenological window for $\beta$
 - **O5** showed that vertex-based and low-level representation-theoretic mechanisms fail
 - **O6** proves that **no fixed finite-dimensional representation** can produce the
-  required scaling on the LPS cascade studied here
+  power-law redundancy scaling over a growing window on the LPS cascade studied here
 
 The cascade exponent is therefore no longer attributable to any static finite-dimensional
 encoding of admissible transitions within the LPS cascade studied here.
@@ -164,7 +164,7 @@ it requires a genuinely growing dynamical space of admissible directions.
 # Residual Open Problem
 
 Within the LPS construction, what remains open is how a **growing** admissible state
-space could produce the required power-law redundancy decay. A separate model would
+space could produce a power-law redundancy decay. A separate model would
 still be required to identify such an equation with growth on the Heisenberg substrate.
 
 O6 therefore isolates the next necessary construction:
